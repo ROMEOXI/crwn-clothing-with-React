@@ -21,8 +21,6 @@ const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
 
-  console.log(formFields);
-
   const resetFormFeilds = () => {
     setFormFields(defaultFormFields);
   };
@@ -75,7 +73,7 @@ const SignUpForm = () => {
         <FormInput
           label="Email"
           type="email"
-          autoComplete="new-password" 
+          autoComplete="new-password"
           required
           onChange={handleChange}
           name="email"
