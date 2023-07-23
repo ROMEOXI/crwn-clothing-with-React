@@ -38,8 +38,16 @@ googleProvider.setCustomParameters({
 });
 
 export const auth = getAuth();
-export const signInWithGooglePopup = () =>
-  signInWithPopup(auth, googleProvider);
+export const signInWithGooglePopup = () => {
+  signInWithPopup(auth, googleProvider)
+    .catch((error) => {
+      if (error.code === 'auth/popup-closed-by-user') {
+        console.log('The user manually closes the pop-up window.');
+      } else {
+        console.error('An error has occurred: ', error);
+      }
+    });
+};
 
 export const db = getFirestore();
 
