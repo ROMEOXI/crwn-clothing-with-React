@@ -1,10 +1,10 @@
 # Clothing E-commerce
 
-![Image 1](images/image1.png)
+![Home](images/image1.png)
 
-![Image 2](images/image2.png)
+![Sign In](images/image2.png)
 
-![Image 3](images/image3.png)
+![Shopping](images/image3_1.png)
 
 > Front-end using React.js <br>
 > Back-end using Firebase <br>
