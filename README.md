@@ -22,9 +22,7 @@ Features:
 
 ### Test Account Information
 
-If you want to try out our application immediately, please use the following test account credentials to log in:
-
-- Email: mike@example.com
+- Email: mike@gmail.com
 - Password: 12344321
 
 ### Install packages
