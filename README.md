@@ -8,7 +8,7 @@
 
 > Front-end using React.js <br>
 > Back-end using Firebase <br>
-> [Deploy on Netlify](https://delightful-paprenjak-ed2810.netlify.app/)
+> [Deployment](https://delightful-paprenjak-ed2810.netlify.app/)
 
 
 Features:
@@ -19,6 +19,13 @@ Features:
 - 可以按類別瀏覽商品，方便用戶尋找心儀的款式
 - 支持用戶註冊、登入和個人資料管理
 - 購物車功能，用戶可以添加和管理購買的商品
+
+### Test Account Information
+
+If you want to try out our application immediately, please use the following test account credentials to log in:
+
+- Email: mike@example.com
+- Password: 12344321
 
 ### Install packages
 
