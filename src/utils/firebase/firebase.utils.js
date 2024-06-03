@@ -39,14 +39,13 @@ googleProvider.setCustomParameters({
 
 export const auth = getAuth();
 export const signInWithGooglePopup = () => {
-  signInWithPopup(auth, googleProvider)
-    .catch((error) => {
-      if (error.code === 'auth/popup-closed-by-user') {
-        console.log('The user manually closes the pop-up window.');
-      } else {
-        console.error('An error has occurred: ', error);
-      }
-    });
+  signInWithPopup(auth, googleProvider).catch((error) => {
+    if (error.code === "auth/popup-closed-by-user") {
+      console.log("The user manually closes the pop-up window.");
+    } else {
+      console.error("An error has occurred: ", error);
+    }
+  });
 };
 
 export const db = getFirestore();
@@ -72,13 +71,7 @@ export const getCategoriesAndDocuments = async () => {
   const q = query(collectionRef);
 
   const querySnapshot = await getDocs(q);
-  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
-    const { title, items } = docSnapshot.data();
-    acc[title.toLowerCase()] = items;
-    return acc;
-  }, {});
-  // console.log(categoryMap);
-  return categoryMap;
+  return querySnapshot.docs.map((docSnapshot) => docSnapshot.data());
 };
 
 export const createUserDocumentFromAuth = async (
